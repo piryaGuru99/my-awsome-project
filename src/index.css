@@ -1,0 +1,324 @@
+/* General app container styling */
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      /* Gradient background */
+      background: url('https://images.unsplash.com/photo-1506318137072-29e86344f7e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      color: #fff;
+      /* Adjust text color for better readability */
+      overflow: hidden;
+      /* Hide overflowing content */
+      position: relative;
+      /* For positioning the floating elements */
+    }
+
+    /* Styling for the messages container */
+    .messages-container {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    /* Base styling for all messages */
+    .message {
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      word-break: break-word;
+    }
+
+    /* Right-aligned message (user's messages) */
+    .message.right {
+      align-self: flex-end;
+      background-color: #dcf8c6;
+      /* Light green for user messages */
+      color: #333;
+    }
+
+    /* Left-aligned message (other party's messages) */
+    .message.left {
+      align-self: flex-start;
+      background-color: #fff;
+      /* White for other messages */
+      color: #333;
+    }
+
+    /* Center-aligned message (system messages or announcements) */
+    .message.center {
+      align-self: center;
+      background-color: #e5d4ff;
+      /* Light purple for center messages */
+      color: #333;
+      text-align: center;
+    }
+
+    /* Message content styling */
+    .message-content {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /* Style for the unicorn message */
+    .unicorn-message {
+      color: purple;
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      /* Add a subtle text shadow */
+    }
+
+    /* Column styling */
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent white background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1,
+    h2 {
+      color: #333;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      /* Add a subtle text shadow */
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      width: 100%;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      /* Glowing effect */
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    .item-list li {
+      padding: 10px;
+      margin: 5px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: opacity 0.5s ease;
+      /* Fade-out transition */
+    }
+
+    .item-list li:last-child {
+      border-bottom: none;
+    }
+
+    .item-list li button {
+      background-color: #d9534f;
+    }
+
+    .item-list li button:hover {
+      background-color: #c9302c;
+    }
+
+    /* Floating spiritual symbols */
+    .app-container:before,
+    .app-container:after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-image: url('https://www.pngmart.com/files/23/Unicorn-PNG-Transparent-Image.png');
+      /* Replace with your unicorn image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      animation: float 15s linear infinite;
+    }
+
+    .app-container:before {
+      top: 10%;
+      left: 10%;
+    }
+
+    .app-container:after {
+      bottom: 10%;
+      right: 10%;
+      background-image: url('https://www.pngmart.com/files/22/Rainbow-PNG-Transparent-Image.png');
+      /* Replace with your rainbow image */
+      animation-delay: 5s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Manifestation effect */
+    .manifestation-effect {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      color: white;
+      text-shadow: 2px 2px 4px #000000;
+      animation: sparkle 1s ease-in-out infinite;
+    }
+
+    @keyframes sparkle {
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Let Go fade-out effect */
+    .fade-out {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .let-go-message {
+      text-align: center;
+      font-style: italic;
+      color: #ddd;
+      margin-top: 10px;
+    }
+
+    /* Manifest button glow */
+    .manifest-button {
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px rgba(92, 184, 92, 0.8);
+      }
+
+      50% {
+        box-shadow: 0 0 20px rgba(92, 184, 92, 0.8);
+      }
+
+      100% {
+        box-shadow: 0 0 5px rgba(92, 184, 92, 0.8);
+      }
+    }
+
+    /* Universal call button vibration */
+    .universal-call-button {
+      transition: transform 0.1s;
+    }
+
+    .universal-call-button:active {
+      animation: vibrate 0.3s linear infinite;
+    }
+
+    @keyframes vibrate {
+      0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+      }
+
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+      }
+
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+      }
+    }
+
+    /* Rainbow background animation */
+    .rainbow-bg {
+      animation: rainbow 5s linear infinite;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Dark text class */
+    .dark-text {
+      color: black;
+      /* Or any dark color you prefer */
+    }
